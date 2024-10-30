@@ -15,6 +15,10 @@ namespace CS_Frpm
         public Form1()
         {
             InitializeComponent();
+
+            testbottun Testbutton = new testbottun();
+
+            Controls.Add(Testbutton);
         }
     }
 }
