@@ -16,9 +16,11 @@ namespace CS_Frpm
         {
             InitializeComponent();
 
-            testbottun Testbutton = new testbottun();
-
+            testbottun Testbutton = new testbottun(0,0);
             Controls.Add(Testbutton);
+
+            testbottun Testbutton2 = new testbottun(400,100);
+            Controls.Add(Testbutton2);
         }
     }
 }
