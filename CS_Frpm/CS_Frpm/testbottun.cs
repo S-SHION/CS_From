@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,14 +17,17 @@ namespace CS_Frpm
         /// コンストラクタ
         /// クラスを生成したときに呼び出される
         /// </summary>
-        public testbottun(int x, int y, int width,int height) 
+
+        public testbottun(int id,int x, int y, int width,int height) 
         {
             //ClickイベントにOnClick関数を登録
             //ボタンをクリックした時に登録した関数を実行します。
             Click += OnClick;
 
             //ボタン内に文字を表示させる
-            Text = "ボタン";
+            
+            Text = id.ToString();
+            
 
             //ボタンの位置を指定する
             Location = new Point(x,y);
@@ -41,7 +45,7 @@ namespace CS_Frpm
         ///<param name="s"></param>
         public void OnClick(object sender,EventArgs s) 
         {
-            MessageBox.Show("OK");
+            MessageBox.Show(Text);
         }
     }
 }
