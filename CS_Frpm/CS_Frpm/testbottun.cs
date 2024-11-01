@@ -16,7 +16,7 @@ namespace CS_Frpm
         /// コンストラクタ
         /// クラスを生成したときに呼び出される
         /// </summary>
-        public testbottun(int x, int y) 
+        public testbottun(int x, int y, int width,int height) 
         {
             //ClickイベントにOnClick関数を登録
             //ボタンをクリックした時に登録した関数を実行します。
@@ -25,7 +25,11 @@ namespace CS_Frpm
             //ボタン内に文字を表示させる
             Text = "ボタン";
 
+            //ボタンの位置を指定する
             Location = new Point(x,y);
+
+            //ボタンの大きさを指定する
+            Size = new Size(width, height);
         }
 
 
