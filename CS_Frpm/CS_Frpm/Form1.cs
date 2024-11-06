@@ -12,18 +12,22 @@ namespace CS_Frpm
 {
     public partial class Form1 : Form
     {
+        TestLabel _testLabel;
         public Form1()
         {
+           
+
             InitializeComponent();
 
             int i;
             int n = 0;
             int s = 0;
+            string [] o =new string[10] {"a", "b", "c", "d", "e", "f", "g", "h", "i", "k"};
             for (i = 0; i < 10; i++)
             {
                
-                    testbottun Testbutton = new testbottun(i,n,s, 50, 50);
-                    Controls.Add(Testbutton);
+                    testbottun Testbutton = new testbottun(this, o[i],n,s, 50, 50);
+                    Controls.Add(Testbutton);            // ↑自分自身を入れる
                 n = n+50;
                 if (n == 200) //((i+1)%4 == 0)
                 {
@@ -31,7 +35,7 @@ namespace CS_Frpm
                   n = 0;
                 }
             }
-            /*  回答
+            /*回答
             for (i = 0; i < 10; i++)
             {
 
@@ -45,14 +49,23 @@ namespace CS_Frpm
             for (i = 0; i < 10; i++)
             {
 
-                testbottun Testbutton = new testbottun((i%3)*50,(i/3)*50, 50, 50);
+                testbottun Testbutton = new testbottun(this,i,(i%3)*50,(i/3)*50, 50, 50);
                                                       //↑すでにカウントに使っているものを使うと効率がいい
                 Controls.Add(Testbutton);
 
             }*/
 
-            TestLabel testLabel = new TestLabel("ラベル",100,300,50,50);
-            Controls.Add(testLabel);
+             _testLabel = new TestLabel("ラベル",500,300,100,100);
+            Controls.Add(_testLabel);
+        }
+
+        /// <summary>
+        /// ラベルの文字を更新する
+        /// </summary>
+        /// <param name="str"></param>
+        public void LabelTextUpdate(string str)
+        {
+            _testLabel.TextUpdate(str);
         }
     }
 }
