@@ -50,6 +50,9 @@ namespace CS_Frpm
                 Controls.Add(Testbutton);
 
             }*/
+
+            TestLabel testLabel = new TestLabel("ラベル",10,300,50,50);
+            Controls.Add(testLabel);
         }
     }
 }
