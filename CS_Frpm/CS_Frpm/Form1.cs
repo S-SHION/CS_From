@@ -12,7 +12,14 @@ namespace CS_Frpm
 {
     public partial class Form1 : Form
     {
+
+        /// <summary>
+        /// ラベルの文字を更新したいため、
+        /// Form1
+        /// </summary>
         TestLabel _testLabel;
+
+        TestTextBox _textBox;
         public Form1()
         {
            
@@ -56,7 +63,12 @@ namespace CS_Frpm
             }*/
 
              _testLabel = new TestLabel("ラベル",500,300,100,100);
+
             Controls.Add(_testLabel);
+
+            _textBox = new TestTextBox("テキストボックス",10,400,500,100);
+
+            Controls.Add(_textBox);
         }
 
         /// <summary>
