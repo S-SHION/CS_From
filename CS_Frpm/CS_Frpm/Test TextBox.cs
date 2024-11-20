@@ -16,23 +16,28 @@ namespace CS_Frpm
         /// クラスを生成したときに呼び出される
         /// </summary>
 
-        public TestTextBox(string str, int x, int y, int width, int height)
+
+        public TestTextBox (string str, int x, int y, int width, int height)
         {
 
-            //ラベル内に文字を表示させる
-
+            //テキストボックス内に文字を表示させる
             Text = str;
 
-            //ボタンの生成場所を指定
+
+            //テキストボックスの生成場所を指定
             Location = new Point(x, y);
 
-            //ボタンの大きさを指定する
+            //テキストボックスの大きさを指定する
             Size = new Size(width, height);
 
         }
         /// <summary>
-        /// ラベルの文字更新関数
+        /// テキストボックスの文字更新関数
         /// </summary>
         /// <param name="str"></param>
+        public void TextUpdate(string str)
+        {
+            Text = str;
+        }
     }
 }

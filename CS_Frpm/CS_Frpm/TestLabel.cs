@@ -22,10 +22,10 @@ namespace CS_Frpm
 
             Text = str;
 
-            //ボタンの生成場所を指定
+            //ラベルの生成場所を指定
             Location = new Point(x, y);
 
-            //ボタンの大きさを指定する
+            //ラベルの大きさを指定する
             Size = new Size(width, height);
 
         }

@@ -13,7 +13,11 @@ namespace CS_Frpm
 {
     internal class testbottun : Button
     {
+
         Form1 _form1;
+
+        TestTextBox _textbox;
+
 
         /// <summary>
         /// コンストラクタ
@@ -22,7 +26,7 @@ namespace CS_Frpm
 
         public testbottun(Form1 form1,string st,int x, int y, int width,int height) 
         {
-
+           
             _form1 = form1;
 
             //ClickイベントにOnClick関数を登録
@@ -48,9 +52,22 @@ namespace CS_Frpm
         ///</summarry>
         ///<param name="sender"></param>
         ///<param name="s"></param>
+        //テキストボックスの作成
+        
+
         public void OnClick(object sender,EventArgs s) 
         {
+
+
             _form1.LabelTextUpdate(Text);
+
+            string w;
+
+            w = Text;
+
+            Text = _textbox.Text;
+           
+            _form1.TextBoxTextUpdate(w);
         }
     }
 }
