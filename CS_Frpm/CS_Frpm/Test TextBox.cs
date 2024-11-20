@@ -35,9 +35,13 @@ namespace CS_Frpm
         /// テキストボックスの文字更新関数
         /// </summary>
         /// <param name="str"></param>
-        public void TextUpdate(string str)
+        public string TextUpdate(string str)
         {
+            string temp = Text;
+
             Text = str;
+
+            return temp;
         }
     }
 }

@@ -59,15 +59,17 @@ namespace CS_Frpm
         {
 
 
-            _form1.LabelTextUpdate(Text);
+             _form1.LabelTextUpdate(Text);
 
-            string w;
+            // string w;
 
-            w = Text;
+            //w = Text;
 
-            Text = _textbox.Text;
-           
-            _form1.TextBoxTextUpdate(w);
+            //Text = _textbox.Text;
+
+            string t = _form1.TextBoxTextUpdate(Text);
+
+            Text = t;
         }
     }
 }

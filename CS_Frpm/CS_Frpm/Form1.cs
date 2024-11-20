@@ -94,9 +94,11 @@ namespace CS_Frpm
         /// テキストボックスの文字を更新する
         /// </summary>
         /// <param name="str"></param>
-        public void TextBoxTextUpdate(string str)
+        public string TextBoxTextUpdate(string str)
         {
-            _textbox.TextUpdate(str);
+            string s =_textbox.TextUpdate(str);
+
+            return s;
         }
     }
 }
